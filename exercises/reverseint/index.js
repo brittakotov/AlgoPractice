@@ -8,6 +8,14 @@
 //   reverseInt(-15) === -51
 //   reverseInt(-90) === -9
 
+// function reverseInt(n) {
+//   var rev = n.toString().split('').reverse().join('');
+
+//   rev = parseInt(rev)*Math.sign(n);
+
+//   return rev;
+// }
+
 function reverseInt(n) {
   var rev = '';
   var absoluteN = Math.abs(n).toString();
@@ -21,7 +29,7 @@ function reverseInt(n) {
   }
 
   rev = Number(rev) * Math.sign(n);
-  
+
   return rev;
 }
 
