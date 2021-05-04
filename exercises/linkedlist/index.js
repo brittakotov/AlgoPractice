@@ -2,8 +2,33 @@
 // Implement classes Node and Linked Lists
 // See 'directions' document
 
-class Node {}
+class Node {
+  constructor(data, next = null) {
+    this.data = data;
+    this.next = next;
+  }
+}
 
-class LinkedList {}
+class LinkedList {
+  constructor() {
+    this.head = null;
+  }
+
+  insertFirst (data) {
+    var node = new Node(data, this.head);
+    this.head = node;
+  }
+
+  size() {
+    var count = 0;
+    var node = this.head;
+
+    while (node) {
+      node = node.next;
+      count++;
+    }
+    return count;
+  }
+}
 
 module.exports = { Node, LinkedList };
