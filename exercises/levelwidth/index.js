@@ -11,6 +11,16 @@
 // 4       5
 // Answer: [1, 3, 2]
 
-function levelWidth(root) {}
+function levelWidth(root) {
+  var currentNode = root;
+  var widths = [];
+  var queue = [];
+  queue.push(currentNode, 's');
+
+  while (queue.length > 1) {
+    currentNode = queue.shift();
+
+  return list;
+}
 
 module.exports = levelWidth;
