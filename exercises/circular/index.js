@@ -12,6 +12,21 @@
 //   c.next = b;
 //   circular(l) // true
 
-function circular(list) {}
+function circular(list) {
+  if (!list.head) {
+    return;
+  }
+  let slow = list.head;
+  let fast = list.head;
+
+  while (fast.next && fast.next.next) {
+    if (slow === fast) {
+      return true;
+    }
+    slow = slow.next;
+    fast = fast.next.next;
+  }
+  return false;
+}
 
 module.exports = circular;
